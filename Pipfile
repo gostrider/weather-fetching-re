@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+celery = {version = "*", extras = ["redis"]}
+requests = "*"
+Flask = "*"
+SQLAlchemy = "*"
+PyMySQL = "*"
+gevent = "*"
+
+[requires]
+python_version = "2.7"

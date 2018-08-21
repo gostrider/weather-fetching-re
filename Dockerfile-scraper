@@ -1,0 +1,10 @@
+FROM python:2.7.15
+
+ADD . /code
+WORKDIR /code
+
+RUN pip install -r requirements.txt
+
+# RUN celery -A scraper -Q timer purge -f
+
+CMD celery -A scraper worker -Q timer --loglevel=info
